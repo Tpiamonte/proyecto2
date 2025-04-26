@@ -1,0 +1,77 @@
+body{
+   margin: 0;
+   background-color: rgb(204, 209, 210); 
+}
+
+/* estilos hedear */
+/* Estilos menu */
+.contenedor{
+    width: 100%;
+    margin: auto    ;
+}
+nav{
+    display: inline;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+header{
+    width: auto;
+    justify-content: space-between;
+}
+header img{
+    display: in;
+    width: 100px;
+}
+header, footer{
+    background-color: #333;
+    color: white;
+    padding: 15px 15px; 
+    text-align: center;
+}
+
+
+
+
+/* hero */
+
+#hero{
+    background-color: blue;
+
+}
+/* estilos muro y formulario */
+#main{
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    display: grid;
+    grid-template-areas:  "muro formulario";
+    grid-template-columns: 69% 29%;
+    /* grid-template-rows: 100px 200px; */
+    gap: 2%;
+}
+.muroDePublicaciones{
+    background-color: red;
+    grid-area: muro;
+    padding: 1%;
+    border: solid rgb(255, 0, 0);
+    border-radius: 0.5rem;    
+    
+}
+.formulario{
+    grid-area: formulario;
+    border: solid rgb(193, 193, 0);
+    border-radius: 0.5rem;
+    background-color: rgb(193, 193, 0);
+    padding: 2%;
+}
