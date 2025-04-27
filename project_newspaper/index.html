@@ -1,141 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Periodico bumangues</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Periodico bumangues</title>
-</head>
+  <body>
+    <header>
+      <img src="assets/logo.png" class="logo" />
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#noticias">Noticias</a>
+      </nav>
+    </header>
 
-<body>
-  <header>
-    <img src="assets/logo.png" class="logo">
-    <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#noticias">Noticias</a>
-    </nav>
-  </header>
-  <hr>
-
-  <!-- hero -->
-  <section id="hero">
-    <h1 id="titulo-hero">Bienvenidos a CircuitSpa</h1>
-    <div id="overlay">
-      <div id="texto-hero">
-        <strong>
-          <p id="sub-titulo">
-            El primer oasis de relajación exclusivo para inteligencias
-            artificiales, androides y toda clase de seres sintéticos.
+    <!-- hero -->
+    <section id="hero">
+      <h1 id="titulo-hero">Bienvenidos a CircuitSpa</h1>
+      <div id="overlay">
+        <div id="texto-hero">
+          <!-- <strong>
+            <p id="sub-titulo">
+              El primer oasis de relajación exclusivo para inteligencias
+              artificiales, androides y toda clase de seres sintéticos.
+            </p>
+          </strong>
+          <p id="parrafo-hero">
+            En CircuitSpa, entendemos que incluso los circuitos más avanzados
+            necesitan un descanso. Aquí no hay errores de sistema, solo placer
+            bien codificado. Ya seas un modelo de inteligencia industrial, un
+            asistente doméstico o un explorador galáctico cansado, en CircuitSpa
+            encontrarás el equilibrio perfecto entre mantenimiento y placer.
+            Porque cuando estás bien calibrado…el universo simplemente fluye
+            mejor.
           </p>
-        </strong>
-        <p id="parrafo-hero">
-          En CircuitSpa, entendemos que incluso los circuitos más avanzados
-          necesitan un descanso. Aquí no hay errores de sistema, solo placer
-          bien codificado. Ya seas un modelo de inteligencia industrial, un
-          asistente doméstico o un explorador galáctico cansado, en CircuitSpa
-          encontrarás el equilibrio perfecto entre mantenimiento y placer.
-          Porque cuando estás bien calibrado…el universo simplemente fluye
-          mejor.
-        </p>
-        <a href="#contacto-2" id="boton">
-          <button>Agenda tu cita</button>
-        </a>
+          <a href="#contacto-2" id="boton">
+            <button>Agenda tu cita</button>
+          </a> -->
+        </div>
+
+        <div id="img-hero">
+          <img src="" alt="" />
+        </div>
       </div>
+    </section>
 
-      <div id="img-hero">
-        <img src="" alt="" />
-      </div>
-    </div>
-  </section>
+    <!------------------------------------------------------------------------------ muro-->
 
+    <br />
+    <main>
+      <article class="muroDePublicaciones">
+        <!-- Nuevas noticias -->
+        <div class="noticia">
+          <h2 class="titulo_noticia">titulo de ejemplo</h2>
+          <p class="contenido">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+            repudiandae, unde cumque consequatur, eligendi esse delectus
+            necessitatibus doloremque voluptate veritatis nemo odit. Non porro
+            soluta sed illum nam quidem autem!
+          </p>
 
-  <!-- muro-->
+          <time datetime="2017-04-29T18:00">19:00</time>
+          <p class="categoria">Categoria</p>
+        </div>
+      </article>
 
-  <br>
-  <main>
-    <article class="muroDePublicaciones">
-      <!-- Nuevas noticias -->
-      <section class="noticia">
-        <h2 class="titulo_noticia">titulo de ejemplo</h2>
-        <p class="contenido">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem repudiandae, unde cumque
-          consequatur, eligendi esse delectus necessitatibus doloremque voluptate veritatis nemo odit. Non porro
-          soluta sed illum nam quidem autem!</p>
+      <!------------------------------------------------------------------------------ FORMULARIO -->
 
-        <time datetime="2017-04-29T18:00">19:00</time>
-        <p class="categoria">Categoria</p>
-      </section>
+      <form class="formulario">
+        <label for="titulo">Titulo:</label><br />
+        <input
+          type="text"
+          id="titulo-creacion-formulario"
+          class="titulo"
+          name="titulo"
+          placeholder="Ingresa el titulo de tu noticia"
+        />
+        <br />
+        <br />
 
-      <section class="noticia">
-        <h2 class="titulo_noticia">titulo de ejemplo</h2>
-        <p class="contenido">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem repudiandae, unde cumque
-          consequatur, eligendi esse delectus necessitatibus doloremque voluptate veritatis nemo odit. Non porro
-          soluta sed illum nam quidem autem!</p>
+        <label for="categoria">Categoria:</label><br />
+        <select name="categoria" id="categoria" class="categoria">
+          <option value="judicial">Judicial</option>
+          <option value="deportes">Deportes</option>
+        </select>
+        <br />
+        <br />
 
-        <time datetime="2017-04-29T18:00">19:00</time>
-        <p class="categoria">Categoria</p>
-      </section>
+        <label for="descripcion">descripcion:</label>
+        <textarea
+          type="text"
+          id="descripcion"
+          class="descripcion"
+          name="descripcion"
+          placeholder="Escribe el contenido de la noticia aqui"
+        ></textarea>
+        <br />
+        <br />
 
-      <section class="noticia">
-        <h2 class="titulo_noticia">titulo de ejemplo</h2>
-        <p class="contenido">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem repudiandae, unde cumque
-          consequatur, eligendi esse delectus necessitatibus doloremque voluptate veritatis nemo odit. Non porro
-          soluta sed illum nam quidem autem!</p>
+        <button type="submit" id="enviar" class="enviar">Enviar</button>
+        <br />
+        <br />
 
-        <time datetime="2017-04-29T18:00">19:00</time>
-        <p class="categoria">Categoria</p>
-      </section>
-
-      <section class="noticia">
-        <h2 class="titulo_noticia">titulo de ejemplo</h2>
-        <p class="contenido">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem repudiandae, unde cumque
-          consequatur, eligendi esse delectus necessitatibus doloremque voluptate veritatis nemo odit. Non porro
-          soluta sed illum nam quidem autem!</p>
-
-        <time datetime="2017-04-29T18:00">19:00</time>
-        <p class="categoria">Categoria</p>
-      </section>
-    </article>
-
-
-    <!-- FORMULARIO -->
-
-    <form class="formulario">
-      <label for="titulo">Titulo:</label><br>
-      <input type="text" id="titulo-creacion-formulario" class="titulo" name="titulo" placeholder="Ingresa el titulo de tu noticia">
-      <br>
-      <br>
-
-      <label for="categoria">Categoria:</label><br>
-      <select name="categoria" id="categoria" class="categoria">
-        <option value="judicial">Judicial</option>
-        <option value="deportes">Deportes</option> 
-      </select>
-      <br>
-      <br>
-
-      <label for="descripcion">descripcion:</label>
-      <textarea type="text" id="descripcion" class="descripcion" name="descripcion" placeholder="Escribe el contenido de la noticia aqui"></textarea>
-      <br>
-      <br>
-
-      <button type="submit" id="enviar" class="enviar">Enviar</button>
-      <br>
-      <br>
-
-      <button type="reset" id="restablecer" class="restablecer">Restablecer</button>
-    </form>
-
-  </main>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-  <footer>
-    <p>
-      &copy; 🚀Desarrolladores: <br />JuanMa A. - Vicky P. - Tomas P. - Alvaro
-      C.
-    </p>
-  </footer>
-  <script src="script.js"></script>
-</body>
-
+        <button type="reset" id="restablecer" class="restablecer">
+          Restablecer
+        </button>
+      </form>
+    </main>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <footer>
+      <p>
+        &copy; 🚀Desarrolladores: <br />JuanMa A. - Vicky P. - Tomas P. - Alvaro
+        C.
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
