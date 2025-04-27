@@ -1,77 +1,115 @@
-body{
-   margin: 0;
-   background-color: rgb(204, 209, 210); 
+:root {
+    --espaciado: 18em;
+    --padding-form: 10px;
+    --padding-form-add: 10px 0.5px;
 }
 
-/* estilos hedear */
-/* Estilos menu */
-.contenedor{
+body {
+    background-color: rgb(204, 209, 210);
+}
+
+
+/* Estilos header */
+
+header {
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
     width: 100%;
-    margin: auto    ;
-}
-nav{
-    display: inline;
-}
-nav ul {
-    list-style: none;
-    padding: 0;
+    background-color: #333;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav ul li {
-    display: inline;
+header .logo {
+    width: 100px;
+    height: 60px;
 }
 
-nav ul li a {
+header a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    margin: 0 15px;
 }
-header{
-    width: auto;
-    justify-content: space-between;
-}
-header img{
-    display: in;
-    width: 100px;
-}
-header, footer{
+
+footer {
     background-color: #333;
     color: white;
-    padding: 15px 15px; 
+    padding: 15px 15px;
     text-align: center;
 }
 
-
-
-
 /* hero */
 
-#hero{
+#hero {
+    margin-top: 100px;
     background-color: blue;
-
 }
-/* estilos muro y formulario */
-#main{
+
+/* estilo muro */
+
+.noticia {
+    border: black solid 1px;
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: white;
+}
+
+main {
     margin-left: 0.5%;
     margin-right: 0.5%;
-    display: grid;
-    grid-template-areas:  "muro formulario";
-    grid-template-columns: 69% 29%;
-    /* grid-template-rows: 100px 200px; */
-    gap: 2%;
+    display: flex;
+    justify-content: center;
 }
-.muroDePublicaciones{
+
+.muroDePublicaciones {
     background-color: red;
-    grid-area: muro;
-    padding: 1%;
+    padding: 25px;
     border: solid rgb(255, 0, 0);
-    border-radius: 0.5rem;    
-    
+    position: relative;
 }
-.formulario{
-    grid-area: formulario;
-    border: solid rgb(193, 193, 0);
-    border-radius: 0.5rem;
-    background-color: rgb(193, 193, 0);
-    padding: 2%;
+
+/* estilo formulario */
+
+.formulario {
+    margin: 0px 20px;
+    padding: 10px 20px;
+    background-color: aqua;
+    position: relative;
+}
+
+.titulo{
+    width: var(--espaciado);
+    padding: var(--padding-form-add);
+    border-radius: 20px;
+}
+
+.categoria{
+    width: var(--espaciado);
+    padding: var(--padding-form);
+    border-radius: 20px;
+}
+
+.descripcion{
+    width: var(--espaciado);
+    height: 100px;
+    padding: var(--padding-form-add);
+    border-radius: 20px;
+    resize: none;
+}
+
+.enviar{
+    width: var(--espaciado);
+    padding: var(--padding-form);
+    border-radius: 20px;
+}
+
+.restablecer{
+    width: var(--espaciado);
+    padding: var(--padding-form);
+    border-radius: 20px;
 }

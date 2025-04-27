@@ -1,148 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Periodico bumangues</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Periodico bumangues</title>
 </head>
+
 <body>
-    <header>
-        <div class="container">
-           <img src="assets/logo.png" id="logo"> 
-            <nav class="container">
-              <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#actualidad">Actualidad</a></li>
-                <li><a href="#deportes">Deportes</a></li>
-              </ul>
-            </nav>
-        </div>
-    </header>
-    <hr>
-    <!-- hero -->
+  <header>
+    <img src="assets/logo.png" class="logo">
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#noticias">Noticias</a>
+    </nav>
+  </header>
+  <hr>
 
+  <!-- hero -->
+  <section id="hero">
+    <h1 id="titulo-hero">Bienvenidos a CircuitSpa</h1>
+    <div id="overlay">
+      <div id="texto-hero">
+        <strong>
+          <p id="sub-titulo">
+            El primer oasis de relajación exclusivo para inteligencias
+            artificiales, androides y toda clase de seres sintéticos.
+          </p>
+        </strong>
+        <p id="parrafo-hero">
+          En CircuitSpa, entendemos que incluso los circuitos más avanzados
+          necesitan un descanso. Aquí no hay errores de sistema, solo placer
+          bien codificado. Ya seas un modelo de inteligencia industrial, un
+          asistente doméstico o un explorador galáctico cansado, en CircuitSpa
+          encontrarás el equilibrio perfecto entre mantenimiento y placer.
+          Porque cuando estás bien calibrado…el universo simplemente fluye
+          mejor.
+        </p>
+        <a href="#contacto-2" id="boton">
+          <button>Agenda tu cita</button>
+        </a>
+      </div>
 
-    
-    <section id="hero">
-        <h1 id="titulo-hero">Bienvenidos a CircuitSpa</h1>
-        <div id="overlay">
-          <div id="texto-hero">
-            <strong>
-              <p id="sub-titulo">
-                El primer oasis de relajación exclusivo para inteligencias
-                artificiales, androides y toda clase de seres sintéticos.
-              </p>
-            </strong>
-            <p id="parrafo-hero">
-              En CircuitSpa, entendemos que incluso los circuitos más avanzados
-              necesitan un descanso. Aquí no hay errores de sistema, solo placer
-              bien codificado. Ya seas un modelo de inteligencia industrial, un
-              asistente doméstico o un explorador galáctico cansado, en CircuitSpa
-              encontrarás el equilibrio perfecto entre mantenimiento y placer.
-              Porque cuando estás bien calibrado…el universo simplemente fluye
-              mejor.
-            </p>
-            <a href="#contacto-2" id="boton">
-              <button href="#contacto-2">Agenda tu cita</button>
-            </a>
-          </div>
-
-          <div id="img-hero">
-            <img src="" alt="" />
-          </div>
-        </div>
-      </section>
-
-      
-    <!-- muro-->
-     
-    <br>
-    <div id="main">
-      <section class="muroDePublicaciones">
-      <!-- Nuevas noticias -->
-      <section id="muro">
-            <div class="noticias">
-                <h1 id="titulo">titulo de ejemplo</h1>
-                <p id="contenido">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem repudiandae, unde cumque consequatur, eligendi esse delectus necessitatibus doloremque voluptate veritatis nemo odit. Non porro soluta sed illum nam quidem autem!</p>
-            
-                <time datetime="2017-04-29T18:00">19:00</time>.
-                <p id="categoria">Categoria</p>
-            </div>
-      </section>
-    </section>
-    
-
-
-
-
-
-<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
-
-
-<hr>
-
-<!-- FORMULARIO -->
-
-      <div class="formulario">
-        <form class="formario-entero">
-          <!-- titulo del formulario -->
-          <label for="titulo">Titulo:</label>
-          <label for="">
-          <input
-            type="text"
-            id="titulo-creacion-formulario"
-            name="titulo-creacion-formulario"
-            placeholder="Ingresa el titulo de tu noticia">
-          </input>
-          </label>
-          <br />
-          <label for="descripcion">descripcion:</label>
-          <label for=""
-            ><textarea
-              type="text"
-              id="descripcion"
-              name="descripcion"
-              rows="4"
-              cols="50"
-              placeholder="Escribe el contenido de la noticia aqui"
-        ></textarea>
-          </label>
-          <br />
-          <label for="categoria">Categoria:</label>
-          <br />
-          <label for="">
-            <input
-            type="text"
-              id="categoria"
-              name="categoria"
-              placeholder="Ingresa la categoria de tu noticia"
-            ></input>
-          </label>
-          <br />
-
-          <label for=""
-            ><input
-              type="checkbox"
-              name="consentimiento"
-              value="condiciones"
-            />Privado</label>
-          <br />
-          <button type="submit" id="enviar">Enviar</button>
-          <br />
-          <button type="reset" id="Restablecer">Restablecer</button>
-        </form>
+      <div id="img-hero">
+        <img src="" alt="" />
       </div>
     </div>
-    <p>aaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaa</p>
-    <footer>
-      <p>
-        &copy; 🚀Desarrolladores: <br />JuanMa A. - Vicky P. - Tomas P. - Alvaro
-        C.
-      </p>
-    </footer>
-    <script src="script.js"></script>
+  </section>
+
+
+  <!-- muro-->
+
+  <br>
+  <main>
+    <article class="muroDePublicaciones">
+      <!-- Nuevas noticias -->
+      <section class="noticia">
+        <h2 class="titulo_noticia">titulo de ejemplo</h2>
+        <p class="contenido">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem repudiandae, unde cumque
+          consequatur, eligendi esse delectus necessitatibus doloremque voluptate veritatis nemo odit. Non porro
+          soluta sed illum nam quidem autem!</p>
+
+        <time datetime="2017-04-29T18:00">19:00</time>
+        <p class="categoria">Categoria</p>
+      </section>
+
+      <section class="noticia">
+        <h2 class="titulo_noticia">titulo de ejemplo</h2>
+        <p class="contenido">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem repudiandae, unde cumque
+          consequatur, eligendi esse delectus necessitatibus doloremque voluptate veritatis nemo odit. Non porro
+          soluta sed illum nam quidem autem!</p>
+
+        <time datetime="2017-04-29T18:00">19:00</time>
+        <p class="categoria">Categoria</p>
+      </section>
+
+      <section class="noticia">
+        <h2 class="titulo_noticia">titulo de ejemplo</h2>
+        <p class="contenido">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem repudiandae, unde cumque
+          consequatur, eligendi esse delectus necessitatibus doloremque voluptate veritatis nemo odit. Non porro
+          soluta sed illum nam quidem autem!</p>
+
+        <time datetime="2017-04-29T18:00">19:00</time>
+        <p class="categoria">Categoria</p>
+      </section>
+
+      <section class="noticia">
+        <h2 class="titulo_noticia">titulo de ejemplo</h2>
+        <p class="contenido">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem repudiandae, unde cumque
+          consequatur, eligendi esse delectus necessitatibus doloremque voluptate veritatis nemo odit. Non porro
+          soluta sed illum nam quidem autem!</p>
+
+        <time datetime="2017-04-29T18:00">19:00</time>
+        <p class="categoria">Categoria</p>
+      </section>
+    </article>
+
+
+    <!-- FORMULARIO -->
+
+    <form class="formulario">
+      <label for="titulo">Titulo:</label><br>
+      <input type="text" id="titulo-creacion-formulario" class="titulo" name="titulo" placeholder="Ingresa el titulo de tu noticia">
+      <br>
+      <br>
+
+      <label for="categoria">Categoria:</label><br>
+      <select name="categoria" id="categoria" class="categoria">
+        <option value="judicial">Judicial</option>
+        <option value="deportes">Deportes</option> 
+      </select>
+      <br>
+      <br>
+
+      <label for="descripcion">descripcion:</label>
+      <textarea type="text" id="descripcion" class="descripcion" name="descripcion" placeholder="Escribe el contenido de la noticia aqui"></textarea>
+      <br>
+      <br>
+
+      <button type="submit" id="enviar" class="enviar">Enviar</button>
+      <br>
+      <br>
+
+      <button type="reset" id="restablecer" class="restablecer">Restablecer</button>
+    </form>
+
+  </main>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <footer>
+    <p>
+      &copy; 🚀Desarrolladores: <br />JuanMa A. - Vicky P. - Tomas P. - Alvaro
+      C.
+    </p>
+  </footer>
+  <script src="script.js"></script>
 </body>
+
 </html>
