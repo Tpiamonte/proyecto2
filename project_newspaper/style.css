@@ -119,27 +119,9 @@ footer {
     text-align: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* estilo muro */
 
-.noticia {
+.noticia  {
     border: black solid 1px;
     margin-bottom: 5px;
     padding: 5px;
@@ -154,49 +136,49 @@ main {
 }
 
 .muroDePublicaciones {
-    background-color: red;
-    padding: 25px;
-    border: solid rgb(255, 0, 0);
+    background-color: #e9dede;
+    border: solid #e9dede;
+    padding: 25px;    
     position: relative;
 }
+
+
 
 /* estilo formulario */
 
 .formulario {
     margin: 0px 20px;
     padding: 10px 20px;
-    background-color: aqua;
-    position: relative;
+    background-color: #e9dede;
+    border: solid #e9dede;
 }
 
 .titulo{
     width: var(--espaciado);
     padding: var(--padding-form-add);
-    border-radius: 20px;
 }
 
 .categoria{
     width: var(--espaciado);
     padding: var(--padding-form);
-    border-radius: 20px;
 }
 
 .descripcion{
     width: var(--espaciado);
     height: 100px;
     padding: var(--padding-form-add);
-    border-radius: 20px;
     resize: none;
 }
 
 .enviar{
     width: var(--espaciado);
     padding: var(--padding-form);
-    border-radius: 20px;
 }
 
 .restablecer{
     width: var(--espaciado);
     padding: var(--padding-form);
-    border-radius: 20px;
+}
+.titulo .categoria .descripcion .enviar .restablecer{
+    border-radius: 10%;
 }

@@ -51,7 +51,7 @@
 
     <br />
     <main>
-      <article class="muroDePublicaciones">
+      <article class="muroDePublicaciones" id="muroNoticias">
         <!-- Nuevas noticias -->
         <div class="noticia">
           <h2 class="titulo_noticia">titulo de ejemplo</h2>
@@ -62,9 +62,10 @@
             soluta sed illum nam quidem autem!
           </p>
 
-          <time datetime="2017-04-29T18:00">19:00</time>
+          <p class="fecha"> fecha </p>
           <p class="categoria">Categoria</p>
         </div>
+
       </article>
 
       <!------------------------------------------------------------------------------ FORMULARIO -->
@@ -80,7 +81,9 @@
         />
         <br />
         <br />
-
+        <label>Publico</label>
+        <input type="checkbox" id="accesoPublico">
+        <br>
         <label for="categoria">Categoria:</label><br />
         <select name="categoria" id="categoria" class="categoria">
           <option value="judicial">Judicial</option>
@@ -100,11 +103,11 @@
         <br />
         <br />
 
-        <button type="submit" id="enviar" class="enviar">Enviar</button>
+        <button  id="enviar" class="enviar" onclick="generarNoticia(event)">Enviar</button>
         <br />
         <br />
 
-        <button type="reset" id="restablecer" class="restablecer">
+        <button type="reset" id="restablecer" class="restablecer" >
           Restablecer
         </button>
       </form>
