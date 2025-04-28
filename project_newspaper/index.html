@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css" />
     <title>Periodico bumangues</title>
   </head>
@@ -10,9 +11,16 @@
   <body>
     <header>
       <img src="assets/logo.png" class="logo" />
-      <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#noticias">Noticias</a>
+      <nav class="barra-menu">
+        <ul>
+          <li>
+            <img src="assets/1.gif" alt="icono-animado" class="icono">
+            <a href="#inicio">Inicio</a>
+          </li>
+          <li><img src="assets/2.gif" alt="icono-animado" class="icono">
+            <a href="#noticias"> Noticias</a>
+          </li>
+        </ul>
       </nav>
     </header>
 
@@ -49,7 +57,19 @@
 
     <!------------------------------------------------------------------------------ muro-->
 
-    <br />
+    <!-- Categoria para mostrar las noticias-->
+     <div class="contenedorFiltro">
+      <h3>Filtrar noticia por categoria:</h3>
+        <select name="filtro" class="filtro">
+          <option value="judicial">Judicial</option>
+          <option value="deportes">Deportes</option>
+        </select>
+        <button class="filtro" id="filtro" onclick="aplicarFiltro()" >Aplicar filtro</button>
+        <button type="reset" id="restablecer1" >Restablecer</button>
+     </div>
+    <br>
+
+
     <main>
       <article class="muroDePublicaciones" id="muroNoticias">
         <!-- Nuevas noticias -->
@@ -62,11 +82,22 @@
             soluta sed illum nam quidem autem!
           </p>
 
-          <p class="fecha"> fecha </p>
-          <p class="categoria">Categoria</p>
+          <p class="fechaNoticia"> fecha </p>
+          <p class="categoriaNoticia">Categoria</p>
+  
+      
+          <div class="botones-reaccion">
+            <i class = "fa fa-thumbs-up like"></i><span class="contador like-count">0</span>
+            <i class = "fa fa-thumbs-down dislike"></i><span class="contador dislike-count">0</span>
+          </div>
+          
         </div>
 
       </article>
+
+      
+
+  
 
       <!------------------------------------------------------------------------------ FORMULARIO -->
 
@@ -81,9 +112,6 @@
         />
         <br />
         <br />
-        <label>Publico</label>
-        <input type="checkbox" id="accesoPublico">
-        <br>
         <label for="categoria">Categoria:</label><br />
         <select name="categoria" id="categoria" class="categoria">
           <option value="judicial">Judicial</option>
@@ -92,7 +120,7 @@
         <br />
         <br />
 
-        <label for="descripcion">descripcion:</label>
+        <label for="descripcion">Descripcion:</label>
         <textarea
           type="text"
           id="descripcion"
@@ -102,6 +130,10 @@
         ></textarea>
         <br />
         <br />
+        <label>Publico</label>
+        <input type="checkbox" id="accesoPublico">
+        <br>
+        <br>
 
         <button  id="enviar" class="enviar" onclick="generarNoticia(event)">Enviar</button>
         <br />
