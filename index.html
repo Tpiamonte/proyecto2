@@ -3,9 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Blog Noticiero</title>
+    <link rel="icon" href="assets/megafono.ico" />
   </head>
 
   <body>
@@ -14,10 +18,11 @@
       <nav class="barra-menu">
         <ul>
           <li>
-            <img src="assets/1.gif" alt="icono-animado" class="icono">
+            <img src="assets/1.gif" alt="icono-animado" class="icono" />
             <a href="#inicio">Inicio</a>
           </li>
-          <li><img src="assets/2.gif" alt="icono-animado" class="icono">
+          <li>
+            <img src="assets/2.gif" alt="icono-animado" class="icono" />
             <a href="#noticias">Blogs</a>
           </li>
         </ul>
@@ -28,8 +33,7 @@
     <section id="hero">
       <h1 id="titulo-hero">Bienvenidos al Blog Noticiero</h1>
       <div id="overlay">
-        <div id="texto-hero">
-        </div>
+        <div id="texto-hero"></div>
         <div id="img-hero">
           <img src="" alt="" />
         </div>
@@ -39,46 +43,74 @@
     <!------------------------------------------------------------------------------ muro-->
 
     <!-- Categoria para mostrar los blogs-->
-     <div class="contenedorFiltro">
+    <div class="contenedorFiltro">
       <h3>Filtrar blog por categoria:</h3>
-        <select name="filtro" class="filtro">
-          <option value="judicial">Judicial</option>
-          <option value="deportes">Deportes</option>
-        </select>
-        <button class="filtro" id="filtro" onclick="aplicarFiltro()" >Aplicar filtro</button>
-        <button type="reset" id="restablecer1" >Restablecer</button>
-     </div>
-    <br>
-
+      <select name="filtro" class="filtro">
+        <option value="judicial">Judicial</option>
+        <option value="deportes">Deportes</option>
+      </select>
+      <button class="filtro" id="filtro" onclick="aplicarFiltro()">
+        Aplicar filtro
+      </button>
+      <button type="reset" id="restablecer1">Restablecer</button>
+    </div>
+    <br />
 
     <main>
       <article class="muroDePublicaciones" id="muroNoticias">
         <!-- Nuevos blogs -->
         <div class="noticia">
-          <h2 class="titulo_noticia">titulo de ejemplo</h2>
+          <h2 class="titulo_noticia">
+            El Real Madrid avanza a la final de la Champions tras vencer al
+            Bayern Múnich
+          </h2>
           <p class="contenido">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-            repudiandae, unde cumque consequatur, eligendi esse delectus
-            necessitatibus doloremque voluptate veritatis nemo odit. Non porro
-            soluta sed illum nam quidem autem!
+            En un partido vibrante disputado en el Santiago Bernabéu, el Real
+            Madrid selló su pase a la final de la UEFA Champions League tras
+            imponerse 2-1 al Bayern Múnich. Con goles de Vinícius Jr. y Jude
+            Bellingham, el conjunto merengue logró remontar el tanto inicial de
+            Harry Kane, desatando la euforia de los aficionados en la capital
+            española.
           </p>
 
-          <p class="fechaNoticia"> fecha </p>
-          <p class="categoriaNoticia">Categoria</p>
-  
-      
+          <p class="fechaNoticia">29/4/2025, 2:58:30 p.m.</p>
+          <p class="categoriaNoticia">Deportes</p>
+
           <div class="botones-reaccion">
-            <i class = "fa fa-thumbs-up like"></i><span class="contador like-count">0</span>
-            <i class = "fa fa-thumbs-down dislike"></i><span class="contador dislike-count">0</span>
+            <i class="fa fa-thumbs-up like"></i
+            ><span class="contador like-count">0</span>
+            <i class="fa fa-thumbs-down dislike"></i
+            ><span class="contador dislike-count">0</span>
           </div>
-          
         </div>
+        <div class="noticia">
+          <h2 class="titulo_noticia">
+            Condenan a exalcalde por corrupción en contrato de obras públicas
+          </h2>
+          <p class="contenido">
+            El Tribunal Superior de Justicia de Antioquia condenó este martes al
+            exalcalde de Bello, Juan Carlos Restrepo, a siete años de prisión
+            por delitos de contrato sin cumplimiento de requisitos legales y
+            peculado por apropiación. La investigación reveló irregularidades en
+            la adjudicación de un contrato de infraestructura valorado en más de
+            12 mil millones de pesos. Según la Fiscalía, Restrepo favoreció a
+            una empresa sin experiencia previa a cambio de comisiones ilícitas.
+            Además de la pena de prisión, el exfuncionario fue inhabilitado para
+            ejercer cargos públicos durante 12 años. La defensa anunció que
+            apelará la sentencia.
+          </p>
 
+          <p class="fechaNoticia">29/4/2025, 3:10:12 p.m.</p>
+          <p class="categoriaNoticia">Judicial</p>
+
+          <div class="botones-reaccion">
+            <i class="fa fa-thumbs-up like"></i
+            ><span class="contador like-count">0</span>
+            <i class="fa fa-thumbs-down dislike"></i
+            ><span class="contador dislike-count">0</span>
+          </div>
+        </div>
       </article>
-
-      
-
-  
 
       <!------------------------------------------------------------------------------ FORMULARIO -->
 
@@ -95,8 +127,8 @@
         <br />
         <label for="categoria">Categoria:</label><br />
         <select name="categoria" id="categoria" class="categoria">
-          <option value="judicial">Judicial</option>
-          <option value="deportes">Deportes</option>
+          <option value="Judicial">Judicial</option>
+          <option value="Deportes">Deportes</option>
         </select>
         <br />
         <br />
@@ -112,25 +144,24 @@
         <br />
         <br />
         <label>Publico</label>
-        <input type="checkbox" id="accesoPublico">
-        <br>
-        <br>
-
-        <button  id="enviar" class="enviar" onclick="generarNoticia(event)">Enviar</button>
+        <input type="checkbox" id="accesoPublico" />
         <br />
         <br />
 
-        <button type="reset" id="restablecer" class="restablecer" >
+        <button id="enviar" class="enviar" onclick="generarNoticia(event)">
+          Enviar
+        </button>
+        <br />
+        <br />
+
+        <button type="reset" id="restablecer" class="restablecer">
           Restablecer
         </button>
       </form>
     </main>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <footer>
-      <p>
-        &copy; 🚀Desarrolladores: <br />JuanMa A. - Vicky P. - Tomas P. - Alvaro
-        C.
-      </p>
+      <p>&copy; 🚀Desarrolladores: <br />JuanMa A. - Vicky P. - Tomas P.</p>
     </footer>
     <script src="script.js"></script>
   </body>

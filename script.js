@@ -1,33 +1,30 @@
 //filtro
-
+document.addEventListener("DOMContentLoaded", cargarNoticias);
 function aplicarFiltro() {
   const filtro = document.querySelector('select[name="filtro"]').value;
-  const noticias = document.querySelectorAll('.noticia');
+  const noticias = document.querySelectorAll(".noticia");
 
-  noticias.forEach(noticia => {
+  noticias.forEach((noticia) => {
     const categoria = noticia.id;
     if (categoria === filtro) {
-      noticia.style.display = 'grid';
+      noticia.style.display = "grid";
     } else {
-      noticia.style.display = 'none';
+      noticia.style.display = "none";
     }
   });
 }
 
 // Opción para el botón "Restablecer"
-document.getElementById('restablecer1').addEventListener('click', function () {
-  const noticias = document.querySelectorAll('.noticia');
-  noticias.forEach(noticia => {
-    noticia.style.display = 'grid';
+document.getElementById("restablecer1").addEventListener("click", function () {
+  const noticias = document.querySelectorAll(".noticia");
+  noticias.forEach((noticia) => {
+    noticia.style.display = "grid";
   });
 });
 
-
-
 // Crear noticias
 
 // Crear noticias
-
 
 function crearNoticias(
   titulo = "",
@@ -35,20 +32,29 @@ function crearNoticias(
   categoria = "",
   accesoPublico = ""
 ) {
+  for (let existente of "noticias") {
+    const tituloExistente =
+      existente.querySelector(".titulo_noticia")?.textContent;
+    const contenidoExistente =
+      existente.querySelector(".contenido")?.textContent;
+    if (tituloExistente === titulo && contenidoExistente === descripcion) {
+      return; // Ya existe esta noticia en el DOM, no la crees otra vez
+    }
+  }
+
   const muro = document.getElementById("muroNoticias");
   const crearDivNoticia = document.createElement("div");
-
 
   // Elementosx
   const crearTituloNoticia = document.createElement("h2");
   const crearDescripcionNoticia = document.createElement("p");
   const crearCategoriaNoticia = document.createElement("p");
   const crearFechaNoticia = document.createElement("p");
-  const crearContenedorBotones = document.createElement('div');
-  const crearIBotones = document.createElement('i');
-  const crearSpan1Botones = document.createElement('span');
-  const crearIBotones2 = document.createElement('i');
-  const crearSpan2Botones = document.createElement('span');
+  const crearContenedorBotones = document.createElement("div");
+  const crearIBotones = document.createElement("i");
+  const crearSpan1Botones = document.createElement("span");
+  const crearIBotones2 = document.createElement("i");
+  const crearSpan2Botones = document.createElement("span");
 
   let fechaHoy = new Date().toLocaleString();
 
@@ -70,7 +76,7 @@ function crearNoticias(
   crearIBotones.classList.add("fa", "fa-thumbs-up", "like");
   crearSpan1Botones.classList.add("contador", "like-count");
   crearSpan1Botones.textContent = "0";
-  
+
   crearIBotones2.classList.add("fa", "fa-thumbs-down", "dislike");
   crearSpan2Botones.classList.add("contador", "dislike-count");
   crearSpan2Botones.textContent = "0";
@@ -89,40 +95,39 @@ function crearNoticias(
   crearDivNoticia.appendChild(crearFechaNoticia);
   crearDivNoticia.appendChild(crearContenedorBotones);
 
-  if(accesoPublico === true){
+  if (accesoPublico === true) {
     muro.appendChild(crearDivNoticia);
   }
-  
 
   // Asignar eventos de like y dislike para la noticia nueva
-  crearIBotones.addEventListener('click', () => {
+  crearIBotones.addEventListener("click", () => {
     let count = parseInt(crearSpan1Botones.textContent);
     crearSpan1Botones.textContent = count + 1;
-    crearIBotones.style.color = 'lightgreen';
+    crearIBotones.style.color = "lightgreen";
   });
 
-  crearIBotones2.addEventListener('click', () => {
+  crearIBotones2.addEventListener("click", () => {
     let count = parseInt(crearSpan2Botones.textContent);
     crearSpan2Botones.textContent = count + 1;
-    crearIBotones2.style.color = 'lightcoral';
+    crearIBotones2.style.color = "lightcoral";
   });
-  
+
   const noticia = {
     titulo,
     descripcion,
     categoria,
-    fecha: fechaHoy
+    fecha: fechaHoy,
   };
-
-  let noticiasGuardadas = JSON.parse(localStorage.getItem("noticias")) || [];
-  noticiasGuardadas.push(noticia);
-  localStorage.setItem("noticias", JSON.stringify(noticiasGuardadas));
-
+  if (accesoPublico === true) {
+    let noticiasGuardadas = JSON.parse(localStorage.getItem("noticias")) || [];
+    noticiasGuardadas.push(noticia);
+    localStorage.setItem("noticias", JSON.stringify(noticiasGuardadas));
+  }
 }
 function cargarNoticias() {
   const noticiasGuardadas = JSON.parse(localStorage.getItem("noticias")) || [];
-  noticiasGuardadas.forEach(noticia => {
-    crearNoticias(noticia.titulo, noticia.descripcion, noticia.categoria,true);
+  noticiasGuardadas.forEach((noticia) => {
+    crearNoticias(noticia.titulo, noticia.descripcion, noticia.categoria, true);
   });
 }
 function generarNoticia(event) {
@@ -138,7 +143,7 @@ function generarNoticia(event) {
   let categoria = categoriaNoticia.value;
   let acceso = accesoPublico.checked;
   console.info(acceso);
-  
+
   crearNoticias(titulo, contenido, categoria, acceso);
 
   // Opcional: limpiar el formulario después de crear la noticia
@@ -148,27 +153,23 @@ function generarNoticia(event) {
   accesoPublico.checked = false;
 }
 
-
 //Eventos para el like
 
-document.querySelectorAll('.noticia').forEach(noticia => {
-  const likeIcon = noticia.querySelector('.like');
-  const dislikeIcon = noticia.querySelector('.dislike');
-  const likeCount = noticia.querySelector('.like-count');
-  const dislikeCount = noticia.querySelector('.dislike-count');
+document.querySelectorAll(".noticia").forEach((noticia) => {
+  const likeIcon = noticia.querySelector(".like");
+  const dislikeIcon = noticia.querySelector(".dislike");
+  const likeCount = noticia.querySelector(".like-count");
+  const dislikeCount = noticia.querySelector(".dislike-count");
 
-  likeIcon.addEventListener('click', () => {
-    let count = parseInt(likeCount.textContent) ;
-    likeCount.textContent = count + 1 ; 
-    likeIcon.style.color = 'lightgreen';
+  likeIcon.addEventListener("click", () => {
+    let count = parseInt(likeCount.textContent);
+    likeCount.textContent = count + 1;
+    likeIcon.style.color = "lightgreen";
   });
 
-  dislikeIcon.addEventListener('click', () => {
-    let count = parseInt(dislikeCount.textContent) ;
-    dislikeCount.textContent = count + 1 ;
-    dislikeIcon.style.color = 'lightcoral';
+  dislikeIcon.addEventListener("click", () => {
+    let count = parseInt(dislikeCount.textContent);
+    dislikeCount.textContent = count + 1;
+    dislikeIcon.style.color = "lightcoral";
   });
-  
-}); 
-
-document.addEventListener('DOMContentLoaded', cargarNoticias);
+});
