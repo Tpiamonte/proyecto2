@@ -4,6 +4,15 @@
     --padding-form-add: 10px 0.5px;
     --header-height: 6%; /* O el tamaño real de tu header */
 }
+h2{
+    font-size: 10px;
+}
+.categoriaNoticia{
+    font-size: 18px;
+}
+.fechaNoticia{
+    font-size: 15px;
+}
 
 body {
     background-color:#d9ede9;
